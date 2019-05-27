@@ -1,0 +1,166 @@
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1050;
+  display: none;
+  overflow: hidden;
+  -webkit-overflow-scrolling: touch;
+  outline: 0;
+
+}
+
+.fade {
+  background: rgba(0,0,0,0.3);
+}
+
+.modal.fade .modal-dialog {
+  -webkit-transform: translate(0, 50%);
+  -ms-transform: translate(0, 50%);
+  -o-transform: translate(0, 50%);
+  transform: translate(0, 50%);
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+}
+.modal.in .modal-dialog {
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+
+.modal-dialog-centered {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: calc(100% - (0.5rem * 2));
+}
+
+.modal-open .modal {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-dialog {
+  position: relative;
+  width: auto;
+}
+
+.modal-content {
+  position: relative;
+  background: #ffffff;
+  text-align: center;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto
+}
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1040;
+  background-color: #000000;
+}
+
+.modal-backdrop.fade {
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: 0.5;
+}
+
+.modal-body {
+  position: relative;
+}
+
+.modal-scrollbar-measure {
+  position: absolute;
+  top: -9999px;
+  width: 50px;
+  height: 50px;
+  overflow: scroll;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: block !important;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.affix {
+  position: fixed;
+}
+
+
+/*---------------------------------------------------*/
+
+.modal-body .header {
+  background-color: #53545e;
+  text-transform: uppercase;
+  color: #ffffff;
+  text-align: left;
+  padding: 30px 30px;
+  font-weight: bold;
+}
+
+.modal-body .header .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: initial;
+  color: #ffffff;
+  border: none;
+  font-size: 23px;
+  cursor: pointer;
+}
+
+.modal-body form {
+  padding: 30px 30px;
+}
+
+.modal-body form p {
+  margin-bottom: 15px;
+}
+
+.modal-body form input {
+  width: 100%;
+  border-radius: 3px;
+  padding: 5px 10px;
+  border: 1px solid #eaeaea;
+}
+
+.modal-body form input[type="submit"] {
+  background-color: #53545e;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 15px 15px;
+  font-weight: bold;
+  border: none;
+}
